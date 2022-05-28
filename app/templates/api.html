@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        {% for i in response %}
+            <div class="form-control text-info">
+                <div>
+                    <div>Title: <strong>{{ i.title }}</strong> | User Id: {{ i.userId }}</div>
+                    <div class="form-control">{{ i.body }}</div><br>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
