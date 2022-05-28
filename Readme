@@ -1,0 +1,47 @@
+Python 3.10.1
+python -m venv virtual
+
+#####################################
+
+pip install django
+pip install requests
+pip install djangorestframework
+pip install markdown
+pip install django-filter
+
+######################################
+
+Package             Version
+------------------- ---------
+asgiref             3.5.2
+certifi             2022.5.18.1
+charset-normalizer  2.0.12
+Django              4.0.4
+django-filter       21.1
+djangorestframework 3.13.1
+idna                3.3
+Markdown            3.3.7
+pip                 22.1.1
+pytz                2022.1
+requests            2.27.1
+setuptools          62.3.2
+sqlparse            0.4.2
+tzdata              2022.1
+urllib3             1.26.9
+#####################################
+
+Spustanie aplikaciu
+
+localhost:8000
+
+#####################################
+
+API view
+
+localhost:8000/posts
+
+Login: admin Password: 123 //Len preto take kratke heslo abi som nemusel vela pisat
+
+Na users treba bit prihlaseni ako admin
+
+localhost:8000/users
