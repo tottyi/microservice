@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Home</h3>
+    <br>
+    
+    {% for post in object_list %}
+    
+        <div>Title: <strong>{{ post.title }}</strong> |
+            {% if user.is_authenticated %}
+                {% if user.id == post.userId.id %}
+                    author: {{ post.userId }}
+                    <a href="{% url 'update' post.pk %}">(update)</a> |
+                    <a href="{% url 'delete' post.pk %}">(delete)</a>
+                {% endif %}
+            {% endif %}
+            </br>
+            {{ post.body|slice:":100"|safe }}...
+            <a href="{% url 'detail' post.pk %}"> more</a>
+            <hr>
+        </div>
+
+    {% endfor %}
+
+{% endblock content %}

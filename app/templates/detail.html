@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Details</h3>
+
+    <h5>{{ post.title }}</h5>
+    <hr>
+    <div>{{ post.body|safe }}</div>
+    <br>
+
+    <a class='btn btn-warning' href="{% url 'home' %}">Back</a>
+
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+    <h3>Add Post...</h3>
+
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class='btn btn-warning'>Post</button>
+    </form>
+
+    <script>
+        var name = '{{ user.id }}';
+        document.getElementById('meno').value = name
+    </script>
+
+{% else %}
+
+    <div>You`re not allowed herre!</div>
+
+{% endif %}
+    
+
+{% endblock content %}
